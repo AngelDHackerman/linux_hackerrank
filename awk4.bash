@@ -5,4 +5,5 @@
 # The numbers are between 0 and 100, both inclusive. These numbers denote the scores of the students in
 # English, Mathematics, and Science, respectively.
 
-# 
+
+awk 'ORS=NR%2?";":"\n"'
