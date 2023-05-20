@@ -9,4 +9,7 @@
 # The replacement **** inserts asterisks followed by a space instead of the found four digits. 
 # The g option ensures that the replacement is performed for all occurrences within each line.
 
+# The reason why it does not mask the last 4 digits, it's because the last 4 digits are NOT followed by
+# en empty space " ", this is why it just take the first 4 groups of 4 numbers. 
+
 sed 's/[0-9]\{4\} /**** /g' 
