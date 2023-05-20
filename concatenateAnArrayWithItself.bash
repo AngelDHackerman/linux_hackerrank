@@ -1,21 +1,8 @@
 #!/bin/bash
 
-declare -a countries # declare and empty array
+# echo: Command used to display output.
+# "${arr[@]}": Expands to all the elements of the array arr. The [@] notation ensures that each element is treated as a separate entity.
+# ${arr[@]} ${arr[@]} ${arr[@]}: Concatenates the array arr three times, with each repetition separated by whitespace.
 
-# read the list of countries and save them in a array:
-
-while read -r country; do
-	if [[ -z "$country" ]]; then
-		break
-	fi
-	countries+=("$country")
-done
-
-# Concatenating the array with itself
-
-concatenated_countries=("${countries[@]}" "${countries[@]}" "${countries[@]}")
-
-# Showing the final array:
-
-echo "${concatenated_countries[@]}"
-
+arr=($(cat))
+echo "${arr[@]} ${arr[@]} ${arr[@]}"
